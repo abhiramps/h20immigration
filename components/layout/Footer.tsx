@@ -32,7 +32,7 @@ export const Footer = () => {
                             <li><Link href="#home" className="hover:text-accent transition-colors">Home</Link></li>
                             <li><Link href="#about" className="hover:text-accent transition-colors">About Us</Link></li>
                             <li><Link href="#services" className="hover:text-accent transition-colors">Services</Link></li>
-                            <li><Link href="#" className="hover:text-accent transition-colors">Blog</Link></li>
+                            {/* <li><Link href="#" className="hover:text-accent transition-colors">Blog</Link></li> */}
                             <li><Link href="#contact" className="hover:text-accent transition-colors">Contact</Link></li>
                         </ul>
                     </div>
@@ -44,12 +44,12 @@ export const Footer = () => {
                             <li><Link href="#" className="hover:text-accent transition-colors">Canada PR Calculator</Link></li>
                             <li><Link href="#" className="hover:text-accent transition-colors">Australia PR Calculator</Link></li>
                             <li><Link href="#" className="hover:text-accent transition-colors">IELTS Converter</Link></li>
-                            <li><Link href="#" className="hover:text-accent transition-colors">Document Checklist</Link></li>
+                            {/* <li><Link href="#" className="hover:text-accent transition-colors">Document Checklist</Link></li> */}
                         </ul>
                     </div>
 
                     {/* Newsletter */}
-                    <div>
+                    {/* <div>
                          <h4 className="font-bold text-lg mb-6">Stay Updated</h4>
                          <p className="text-gray-400 text-sm mb-4">Get immigration tips and updates monthly.</p>
                          <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
@@ -62,7 +62,7 @@ export const Footer = () => {
                                 Subscribe
                              </button>
                          </form>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">

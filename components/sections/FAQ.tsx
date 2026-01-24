@@ -41,10 +41,10 @@ const faqs = [
     question: "Do you provide post-approval support?",
     answer: "Yes! We assist with visa stamping, flight bookings, temporary accommodation guidance, and even provide a 'Settling-In' guide to help you find your feet in your new country.",
   },
-  {
-    question: "Are your consultants certified?",
-    answer: "Absolutely. All our senior consultants are ICCRC-certified (for Canada) or have equivalent credentials for other countries, with 10+ years of immigration experience.",
-  },
+  // {
+  //   question: "Are your consultants certified?",
+  //   answer: "Absolutely. All our senior consultants are ICCRC-certified (for Canada) or have equivalent credentials for other countries, with 10+ years of immigration experience.",
+  // },
 ];
 
 export const FAQ = () => {
