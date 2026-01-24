@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/Button";
 const calculators = [
   "Canada PR Calculator",
   "Australia PR Calculator",
-  "New Zealand PR Calculator",
   "Germany Work Visa Calculator",
   "Saskatchewan PNP Calculator",
   "CLB/IELTS Converter",
