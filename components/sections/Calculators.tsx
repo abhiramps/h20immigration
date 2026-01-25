@@ -1,58 +1,73 @@
 "use client";
 
+import { useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { HiCalculator } from "react-icons/hi";
-import { Button } from "@/components/ui/Button";
+import { CanadaPRCalculator } from "@/components/calculators/CanadaPRCalculator";
+import { AustraliaPRCalculator } from "@/components/calculators/AustraliaPRCalculator";
+import { GermanyOpportunityCardCalculator } from "@/components/calculators/GermanyOpportunityCardCalculator";
+import { SaskatchewanPNPCalculator } from "@/components/calculators/SaskatchewanPNPCalculator";
+import { CLBCalculator } from "@/components/calculators/CLBCalculator";
+import { motion, AnimatePresence } from "framer-motion";
 
 const calculators = [
-  "Canada PR Calculator",
-  "Australia PR Calculator",
-  "Germany Work Visa Calculator",
-  "Saskatchewan PNP Calculator",
-  "CLB/IELTS Converter",
+  { id: "canada", name: "Canada PR (FSW)", component: CanadaPRCalculator },
+  { id: "australia", name: "Australia PR", component: AustraliaPRCalculator },
+  { id: "germany", name: "Germany Opportunity Card", component: GermanyOpportunityCardCalculator },
+  { id: "saskatchewan", name: "Saskatchewan PNP", component: SaskatchewanPNPCalculator },
+  { id: "clb", name: "IELTS to CLB", component: CLBCalculator },
 ];
 
 export const Calculators = () => {
-  return (
-    <Section id="calculators" className="bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
-      {/* Background patterns */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+  const [activeCalc, setActiveCalc] = useState(calculators[0].id);
 
+  return (
+    <Section id="calculators" className="bg-gradient-to-br from-gray-50 to-white relative overflow-hidden py-20">
+      
       <Container className="relative z-10">
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-2">
-            Check Your Eligibility Now
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading text-gray-900 mb-4">
+            Free Eligibility Calculators
           </h2>
-          <p className="text-blue-100 text-lg opacity-90">
-            Use our free calculators to see your chances instantly
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Check your eligibility for various immigration programs instantly with our comprehensive points calculators.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {calculators.map((calc, index) => (
-            <div
-              key={index}
-              className="group bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl hover:bg-white/20 hover:border-white/30 hover:-translate-y-1 transition-all duration-300 shadow-lg"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center text-xl flex-shrink-0 text-white">
-                  <HiCalculator />
-                </div>
-                <div className="w-full">
-                  <h3 className="font-bold text-lg mb-1 leading-snug">{calc}</h3>
-                  <p className="text-sm text-blue-50 mb-4 opacity-80">
-                    Assess your eligibility with our advanced algorithm
-                  </p>
-                  <Button variant="primary" size="sm" fullWidth className="bg-accent hover:bg-accent/90 border-none shadow-md">
-                    Try Calculator
-                  </Button>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10">
+            {calculators.map((calc) => (
+                <button
+                    key={calc.id}
+                    onClick={() => setActiveCalc(calc.id)}
+                    className={`px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 border-2 ${
+                        activeCalc === calc.id
+                        ? "bg-primary text-white border-primary shadow-lg scale-105"
+                        : "bg-white text-gray-600 border-gray-200 hover:border-primary/50 hover:bg-gray-50"
+                    }`}
+                >
+                    {calc.name}
+                </button>
+            ))}
         </div>
+
+        {/* Active Calculator Area */}
+        <div className="min-h-[600px]">
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={activeCalc}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    {calculators.map((calc) => (
+                        activeCalc === calc.id && <calc.component key={calc.id} />
+                    ))}
+                </motion.div>
+            </AnimatePresence>
+        </div>
+
       </Container>
     </Section>
   );
