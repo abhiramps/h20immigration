@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export const GermanyOpportunityCardCalculator = () => {
+  const router = useRouter();
   const [points, setPoints] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
@@ -171,9 +173,17 @@ export const GermanyOpportunityCardCalculator = () => {
             </div>
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col items-center gap-4">
             <Button onClick={calculatePoints} size="lg" className="w-full md:w-auto px-12 py-4 shadow-lg">
                 Check Eligibility
+            </Button>
+            <Button 
+                onClick={() => router.push('/calculators/germany-opportunity-card')}
+                variant="secondary"
+                size="lg"
+                className="w-full md:w-auto px-12 py-4 text-lg font-bold shadow-lg"
+            >
+                Switch to Advanced Calculator
             </Button>
         </div>
 
