@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export const CLBCalculator = () => {
+  const router = useRouter();
   const [result, setResult] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     reading: "7.0",
@@ -93,9 +95,17 @@ export const CLBCalculator = () => {
         ))}
       </div>
 
-      <div className="mt-8 flex justify-center">
+      <div className="mt-8 flex flex-col items-center gap-4">
         <Button onClick={calculateCLB} size="lg" className="w-full md:w-auto px-12 py-4 shadow-lg">
             Convert to CLB
+        </Button>
+        <Button 
+            onClick={() => router.push('/calculators/clb-ielts')}
+            variant="secondary"
+            size="lg"
+            className="w-full md:w-auto px-12 py-4 text-lg font-bold shadow-lg"
+        >
+            Switch to Advanced Calculator
         </Button>
       </div>
 
