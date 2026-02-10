@@ -3,8 +3,11 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
+import { useLeadModal } from "@/context/LeadModalContext";
 
 export const Hero = () => {
+  const { openModal } = useLeadModal();
+
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-secondary">
       {/* Background Particles/Shapes - simplified for now */}
@@ -37,7 +40,7 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 pt-6 justify-center">
-            <Button variant="primary" size="lg" className="shadow-xl shadow-accent/20 text-lg px-8 h-14">
+            <Button variant="primary" size="lg" className="shadow-xl shadow-accent/20 text-lg px-8 h-14" onClick={openModal}>
               Get Your Free Evaluation
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 h-14 backdrop-blur-md bg-white/5 border-white/30 hover:bg-white/10">
