@@ -16,7 +16,7 @@ async function getStats() {
   
   // Group by service (simplified)
   const leads = await prisma.lead.findMany();
-  const servicesMap = leads.reduce((acc: any, lead) => {
+  const servicesMap = leads.reduce((acc: Record<string, number>, lead: { serviceInterest: string | null }) => {
     const service = lead.serviceInterest || 'Other';
     acc[service] = (acc[service] || 0) + 1;
     return acc;
