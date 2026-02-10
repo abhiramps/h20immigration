@@ -3,8 +3,11 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { useLeadModal } from "@/context/LeadModalContext";
 
 export const CTA = () => {
+  const { openModal } = useLeadModal();
+
   return (
     <Section className="bg-primary relative overflow-hidden">
       {/* Background Decor */}
@@ -19,7 +22,7 @@ export const CTA = () => {
           Get expert guidance and transform your immigration dreams into reality.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button variant="primary" size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-lg shadow-accent/25 border-none">
+          <Button variant="primary" size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-lg shadow-accent/25 border-none" onClick={openModal}>
             Get Free Consultation
           </Button>
           <Button variant="outline" size="lg">
