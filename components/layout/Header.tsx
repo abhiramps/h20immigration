@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { HiMenu, HiX } from "react-icons/hi";
 import { cn } from "@/lib/utils";
+import { useLeadModal } from "@/context/LeadModalContext";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -19,6 +20,7 @@ const navLinks = [
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openModal } = useLeadModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +59,7 @@ export const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <Button variant="primary" size="sm">
+            <Button variant="primary" size="sm" onClick={openModal}>
               Get Started
             </Button>
           </nav>
@@ -88,7 +90,7 @@ export const Header = () => {
               </Link>
             ))}
             <div className="pt-4">
-              <Button variant="primary" fullWidth onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="primary" fullWidth onClick={() => { setIsMobileMenuOpen(false); openModal(); }}>
                 Get Started
               </Button>
             </div>
