@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Advanced Germany Opportunity Card Calculator | H20 Immigration",
+  title: "Advanced Germany Opportunity Card Calculator | H2O Immigration",
   description: "Detailed points calculator for the Germany Opportunity Card (Chancenkarte). Check your eligibility with our comprehensive tool.",
 };
 

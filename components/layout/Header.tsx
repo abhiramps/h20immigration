@@ -9,40 +9,75 @@ import { cn } from "@/lib/utils";
 import { useLeadModal } from "@/context/LeadModalContext";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Tools", href: "#calculators" },
-  { name: "About", href: "#about" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Services", href: "/#services" },
+  { name: "Tools", href: "/#calculators" },
+  { name: "Testimonials", href: "/#testimonials" },
+  { name: "Contact", href: "/#contact" },
 ];
 
-export const Header = () => {
+interface HeaderProps {
+  variant?: "transparent" | "solid";
+}
+
+export const Header = ({ variant = "transparent" }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { openModal } = useLeadModal();
 
   useEffect(() => {
+    if (variant === "solid") {
+      setIsScrolled(true);
+      return;
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [variant]);
+
+  const headerIsActive = variant === "solid" || isScrolled;
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Only handle hash links on the same page
+    if (href.startsWith("/#")) {
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        e.preventDefault();
+        const yOffset = -80; // Adjusted for header height
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        setIsMobileMenuOpen(false);
+        // Update URL hash without jumping
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
+        headerIsActive
           ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
           : "bg-transparent py-6"
       )}
     >
       <Container>
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold font-heading text-primary relative z-50">
-            H20<span className={isScrolled ? "text-accent" : "text-white"}>Immigration</span>
+          <Link 
+            href="/" 
+            className={cn(
+              "text-2xl font-bold font-heading relative z-50 transition-colors duration-300",
+              headerIsActive ? "text-primary" : "text-white"
+            )}
+            onClick={(e) => handleNavClick(e, "/#home")}
+          >
+            H2O<span className={headerIsActive ? "text-accent" : "text-white"}>Immigration</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -53,8 +88,9 @@ export const Header = () => {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-accent",
-                  isScrolled ? "text-dark-charcoal" : "text-white/90 hover:text-white"
+                  headerIsActive ? "text-dark-charcoal" : "text-white/90 hover:text-white"
                 )}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </Link>
@@ -68,7 +104,7 @@ export const Header = () => {
           <button
             className={cn(
               "md:hidden p-2 rounded-md relative z-50",
-              isScrolled || isMobileMenuOpen ? "text-gray-900" : "text-white"
+              headerIsActive || isMobileMenuOpen ? "text-gray-900" : "text-white"
             )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -84,7 +120,7 @@ export const Header = () => {
                 key={link.name}
                 href={link.href}
                 className="text-gray-900 font-medium text-lg border-b border-gray-50 py-2 hover:text-accent"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </Link>

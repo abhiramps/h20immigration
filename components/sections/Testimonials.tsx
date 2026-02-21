@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { HiStar } from "react-icons/hi";
 import { Card } from "@/components/ui/Card";
+import { Avatar } from "@/components/ui/Avatar";
 
 const testimonials = [
   {
@@ -12,6 +13,7 @@ const testimonials = [
     rating: 5,
     quote: "The team guided me through every step. My PR approval came in just 6 months! Highly recommended for anyone looking for efficient processing.",
     flag: "🇨🇦",
+    avatar: "/assets/avatars/priya.png",
   },
   {
     name: "Ahmed Hassan",
@@ -19,6 +21,7 @@ const testimonials = [
     rating: 5,
     quote: "Professional, transparent, and incredibly helpful. They were always available to answer my queries and kept me updated throughout.",
     flag: "🇦🇺",
+    avatar: "/assets/avatars/ahmed.png",
   },
   {
     name: "Maria Garcia",
@@ -26,6 +29,7 @@ const testimonials = [
     rating: 5,
     quote: "They made the complex process simple. Best decision ever! I landed a job within 3 months of arriving thanks to their guidance.",
     flag: "🇩🇪",
+    avatar: "/assets/avatars/maria.png",
   },
 ];
 
@@ -46,7 +50,12 @@ export const Testimonials = () => {
           {testimonials.map((testi, index) => (
             <Card key={index} className="border-l-4 border-l-teal-500 h-full flex flex-col">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-300" />
+                <Avatar 
+                  src={testi.avatar} 
+                  alt={testi.name} 
+                  className="w-12 h-12"
+                  fallbackClassName="bg-gradient-to-br from-teal-500 to-blue-600 text-white"
+                />
                 <div>
                    <div className="font-bold text-gray-900">{testi.name}</div>
                    <div className="text-sm text-gray-500 flex items-center">

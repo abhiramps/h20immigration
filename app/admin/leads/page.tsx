@@ -76,9 +76,9 @@ export default function LeadsPage() {
     XLSX.utils.book_append_sheet(workbook, worksheet, "Leads");
 
     if (format === 'csv') {
-      XLSX.writeFile(workbook, `H20_Leads_${new Date().toISOString().split('T')[0]}.csv`, { bookType: 'csv' });
+      XLSX.writeFile(workbook, `H2O_Leads_${new Date().toISOString().split('T')[0]}.csv`, { bookType: 'csv' });
     } else {
-      XLSX.writeFile(workbook, `H20_Leads_${new Date().toISOString().split('T')[0]}.xlsx`);
+      XLSX.writeFile(workbook, `H2O_Leads_${new Date().toISOString().split('T')[0]}.xlsx`);
     }
   };
 

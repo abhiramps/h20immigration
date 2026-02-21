@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Advanced Saskatchewan PNP Calculator | H20 Immigration",
+  title: "Advanced Saskatchewan PNP Calculator | H2O Immigration",
   description: "Detailed point assessment grid for the Saskatchewan Immigrant Nominee Program (SINP). Check your eligibility with our comprehensive tool.",
 };
 

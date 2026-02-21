@@ -35,10 +35,13 @@ export const Calculators = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10" role="tablist">
             {calculators.map((calc) => (
                 <button
                     key={calc.id}
+                    role="tab"
+                    aria-selected={activeCalc === calc.id}
+                    aria-controls={`calc-panel-${calc.id}`}
                     onClick={() => setActiveCalc(calc.id)}
                     className={`px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 border-2 ${
                         activeCalc === calc.id
@@ -56,6 +59,8 @@ export const Calculators = () => {
             <AnimatePresence mode="wait">
                 <motion.div
                     key={activeCalc}
+                    id={`calc-panel-${activeCalc}`}
+                    role="tabpanel"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
