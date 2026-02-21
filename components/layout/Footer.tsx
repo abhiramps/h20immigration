@@ -29,11 +29,11 @@ export const Footer = () => {
                     <div>
                         <h4 className="font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            <li><Link href="#home" className="hover:text-accent transition-colors">Home</Link></li>
-                            <li><Link href="#about" className="hover:text-accent transition-colors">About Us</Link></li>
-                            <li><Link href="#services" className="hover:text-accent transition-colors">Services</Link></li>
+                            <li><Link href="/#home" className="hover:text-accent transition-colors">Home</Link></li>
+                            <li><Link href="/#about" className="hover:text-accent transition-colors">About Us</Link></li>
+                            <li><Link href="/#services" className="hover:text-accent transition-colors">Services</Link></li>
                             {/* <li><Link href="#" className="hover:text-accent transition-colors">Blog</Link></li> */}
-                            <li><Link href="#contact" className="hover:text-accent transition-colors">Contact</Link></li>
+                            <li><Link href="/#contact" className="hover:text-accent transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -68,8 +68,8 @@ export const Footer = () => {
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>© 2025 H20 Immigration. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms & Conditions</Link>
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
                     </div>
                 </div>
             </Container>
