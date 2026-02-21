@@ -10,9 +10,9 @@ import { useLeadModal } from "@/context/LeadModalContext";
 
 const navLinks = [
   { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
   { name: "Services", href: "/#services" },
   { name: "Tools", href: "/#calculators" },
-  { name: "About", href: "/#about" },
   { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/#contact" },
 ];
@@ -41,6 +41,23 @@ export const Header = ({ variant = "transparent" }: HeaderProps) => {
 
   const headerIsActive = variant === "solid" || isScrolled;
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Only handle hash links on the same page
+    if (href.startsWith("/#")) {
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        e.preventDefault();
+        const yOffset = -80; // Adjusted for header height
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        setIsMobileMenuOpen(false);
+        // Update URL hash without jumping
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
+
   return (
     <header
       className={cn(
@@ -58,6 +75,7 @@ export const Header = ({ variant = "transparent" }: HeaderProps) => {
               "text-2xl font-bold font-heading relative z-50 transition-colors duration-300",
               headerIsActive ? "text-primary" : "text-white"
             )}
+            onClick={(e) => handleNavClick(e, "/#home")}
           >
             H2O<span className={headerIsActive ? "text-accent" : "text-white"}>Immigration</span>
           </Link>
@@ -72,6 +90,7 @@ export const Header = ({ variant = "transparent" }: HeaderProps) => {
                   "text-sm font-medium transition-colors hover:text-accent",
                   headerIsActive ? "text-dark-charcoal" : "text-white/90 hover:text-white"
                 )}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </Link>
@@ -101,7 +120,7 @@ export const Header = ({ variant = "transparent" }: HeaderProps) => {
                 key={link.name}
                 href={link.href}
                 className="text-gray-900 font-medium text-lg border-b border-gray-50 py-2 hover:text-accent"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </Link>
