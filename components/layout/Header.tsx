@@ -59,7 +59,7 @@ export const Header = ({ variant = "transparent" }: HeaderProps) => {
               headerIsActive ? "text-primary" : "text-white"
             )}
           >
-            H20<span className={headerIsActive ? "text-accent" : "text-white"}>Immigration</span>
+            H2O<span className={headerIsActive ? "text-accent" : "text-white"}>Immigration</span>
           </Link>
 
           {/* Desktop Nav */}

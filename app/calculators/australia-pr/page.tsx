@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Advanced Australia PR Points Calculator | H20 Immigration",
+  title: "Advanced Australia PR Points Calculator | H2O Immigration",
   description: "Detailed 65-points calculator for Australia's General Skilled Migration (Subclass 189, 190, 491). Check your eligibility with our comprehensive tool.",
 };
 

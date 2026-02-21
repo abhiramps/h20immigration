@@ -2,6 +2,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | H2O Immigration",
+  description: "Learn about how H2O Immigration protects and handles your personal data.",
+};
 
 export default function PrivacyPolicy() {
   return (
@@ -20,7 +26,7 @@ export default function PrivacyPolicy() {
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">1. Introduction</h2>
               <p className="text-gray-600 leading-relaxed">
-                At H20 Immigration Agency, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website and use our immigration consultancy services.
+                At H2O Immigration, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website and use our immigration consultancy services.
               </p>
             </section>
 
@@ -75,8 +81,8 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p className="text-gray-600">
-                Email: privacy@h20immigration.com<br />
-                Address: H20 Immigration Agency, City Center, Global Hub.
+                Email: privacy@h2oimmigration.com<br />
+                Address: H2O Immigration, City Center, Global Hub.
               </p>
             </section>
           </div>

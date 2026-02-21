@@ -68,7 +68,7 @@ export const About = () => {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-lg text-gray-600 leading-relaxed"
                         >
-                            Founded on the pillars of integrity, expertise, and transparency, H20 Immigration has been a guiding light for thousands of families and professionals seeking a new life abroad. We understand that immigration is more than just paperwork; it’s a life-changing journey, and we are honored to be a part of it.
+                            Founded on the pillars of integrity, expertise, and transparency, H2O Immigration has been a guiding light for thousands of families and professionals seeking a new life abroad. We understand that immigration is more than just paperwork; it’s a life-changing journey, and we are honored to be a part of it.
                         </motion.p>
 
                         <motion.div

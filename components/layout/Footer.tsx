@@ -12,7 +12,7 @@ export const Footer = () => {
                     {/* Brand */}
                     <div className="space-y-6">
                         <Link href="/" className="text-2xl font-bold font-heading text-white block">
-                            H20<span className="text-accent">Immigration</span>
+                            H2O<span className="text-accent">Immigration</span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Your trusted partner in global immigration. We facilitate your journey to a better future with expert guidance and transparency.
@@ -66,7 +66,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>© 2025 H20 Immigration. All rights reserved.</p>
+                    <p>© 2025 H2O Immigration. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>

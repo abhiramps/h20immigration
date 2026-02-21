@@ -11,6 +11,12 @@ import { CTA } from "@/components/sections/CTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "H2O Immigration | Pathway to Global Dreams",
+  description: "Expert immigration guidance for Canada, Australia, Germany and more. Use our free points calculators for PR, Job Seeker and Study visas.",
+};
 
 export default function Home() {
   return (

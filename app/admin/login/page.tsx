@@ -44,7 +44,7 @@ export default function AdminLoginPage() {
       <Container className="max-w-md w-full">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-primary font-heading">
-            H20<span className="text-accent">Admin</span>
+            H2O<span className="text-accent">Admin</span>
           </h1>
           <p className="mt-2 text-gray-600 italic">Secure Control Panel</p>
         </div>

@@ -2,6 +2,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditions | H2O Immigration",
+  description: "Read our terms and conditions for using H2O Immigration services.",
+};
 
 export default function TermsConditions() {
   return (
@@ -20,21 +26,21 @@ export default function TermsConditions() {
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">1. Acceptance of Terms</h2>
               <p className="text-gray-600 leading-relaxed">
-                By accessing this website and utilizing the services of H20 Immigration Agency, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.
+                By accessing this website and utilizing the services of H2O Immigration, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.
               </p>
             </section>
 
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">2. Description of Services</h2>
               <p className="text-gray-600 leading-relaxed">
-                H20 Immigration Agency provides consultancy services related to immigration, visa applications, PR assessment, and document preparation. We offer expert guidance to help you navigate the complex immigration processes of various countries.
+                H2O Immigration provides consultancy services related to immigration, visa applications, PR assessment, and document preparation. We offer expert guidance to help you navigate the complex immigration processes of various countries.
               </p>
             </section>
 
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">3. No Guarantee of Outcome</h2>
               <p className="text-gray-600 leading-relaxed">
-                While we strive to provide the most accurate and expert advice, H20 Immigration Agency does not guarantee the approval of any visa application. The final decision on any immigration matter lies solely with the respective government immigration authorities.
+                While we strive to provide the most accurate and expert advice, H2O Immigration does not guarantee the approval of any visa application. The final decision on any immigration matter lies solely with the respective government immigration authorities.
               </p>
             </section>
 
@@ -63,21 +69,21 @@ export default function TermsConditions() {
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">6. Intellectual Property</h2>
               <p className="text-gray-600 leading-relaxed">
-                All content on this website, including text, graphics, logos, and software, is the property of H20 Immigration Agency and is protected by intellectual property laws.
+                All content on this website, including text, graphics, logos, and software, is the property of H2O Immigration and is protected by intellectual property laws.
               </p>
             </section>
 
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">7. Limitation of Liability</h2>
               <p className="text-gray-600 leading-relaxed">
-                H20 Immigration Agency shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services or the outcome of your visa application.
+                H2O Immigration shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services or the outcome of your visa application.
               </p>
             </section>
 
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900">8. Governing Law</h2>
               <p className="text-gray-600 leading-relaxed">
-                These Terms and Conditions are governed by and construed in accordance with the laws of the jurisdiction in which H20 Immigration Agency operates.
+                These Terms and Conditions are governed by and construed in accordance with the laws of the jurisdiction in which H2O Immigration operates.
               </p>
             </section>
           </div>

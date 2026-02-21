@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "H20 Immigration Agency",
+  title: "H2O Immigration",
   description: "Your Pathway to Global Opportunities - Expert Immigration Guidance",
 };
 
