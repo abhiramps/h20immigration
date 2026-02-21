@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { CTA } from "@/components/sections/CTA";
 import { FAQ } from "@/components/sections/FAQ";
+import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <ComparisonTable />
       <CTA />
       <FAQ />
+      <Contact />
       <Footer />
     </main>
   );
