@@ -24,25 +24,25 @@ export const About = () => {
                         </div>
 
                         {/* Floating Badge */}
-                         <motion.div 
+                        <motion.div
                             initial={{ y: 20, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
                             className="absolute -bottom-10 -right-10 z-20 bg-white p-8 rounded-2xl shadow-xl max-w-xs border-t-4 border-accent"
-                         >
-                             <div className="flex items-center gap-4 mb-3">
-                                 <div className="text-4xl font-bold text-accent">98%</div>
-                                 <div className="text-sm text-gray-600 font-medium">Visa Approval Rate</div>
-                             </div>
-                             <p className="text-xs text-gray-500 leading-relaxed">
-                                 Consistently delivering success through expert guidance and meticulous documentation.
-                             </p>
-                         </motion.div>
+                        >
+                            <div className="flex items-center gap-4 mb-3">
+                                <div className="text-4xl font-bold text-accent">98%</div>
+                                <div className="text-sm text-gray-600 font-medium">Visa Approval Rate</div>
+                            </div>
+                            <p className="text-xs text-gray-500 leading-relaxed">
+                                Consistently delivering success through expert guidance and meticulous documentation.
+                            </p>
+                        </motion.div>
 
-                         {/* Decorative Element */}
-                         <div className="absolute -top-10 -left-10 w-40 h-40 bg-teal-50 rounded-full blur-3xl -z-10" />
-                         <div className="absolute bottom-10 right-10 w-60 h-60 bg-blue-50 rounded-full blur-3xl -z-10" />
+                        {/* Decorative Element */}
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-teal-50 rounded-full blur-3xl -z-10" />
+                        <div className="absolute bottom-10 right-10 w-60 h-60 bg-blue-50 rounded-full blur-3xl -z-10" />
                     </motion.div>
 
                     {/* Content Section */}
@@ -61,7 +61,7 @@ export const About = () => {
                             </h2>
                         </motion.div>
 
-                        <motion.p 
+                        <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -71,7 +71,7 @@ export const About = () => {
                             Founded on the pillars of integrity, expertise, and transparency, H20 Immigration has been a guiding light for thousands of families and professionals seeking a new life abroad. We understand that immigration is more than just paperwork; it’s a life-changing journey, and we are honored to be a part of it.
                         </motion.p>
 
-                         <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -81,18 +81,18 @@ export const About = () => {
                             <div className="flex gap-4">
                                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 text-blue-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 text-lg">Licensed Experts</h4>
-                                    <p className="text-sm text-gray-500">Regulated and certified immigration consultants.</p>
+                                    <h4 className="font-bold text-gray-900 text-lg">Experienced Consultants</h4>
+                                    <p className="text-sm text-gray-500">Over 5 years of trusted immigration expertise.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center flex-shrink-0 text-teal-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
                                     </svg>
                                 </div>
                                 <div>

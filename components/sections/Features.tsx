@@ -2,22 +2,30 @@
 
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { HiChartSquareBar, HiUsers, HiCheckCircle, HiArrowRight } from "react-icons/hi";
+import { HiCog, HiUsers, HiCheckCircle, HiArrowRight } from "react-icons/hi";
 import Link from "next/link";
 
 const features = [
+  // {
+  //   icon: HiCog,
+  //   title: "Smart Dashboard",
+  //   description: "Track your application progress in real-time with our advanced tracking system. Get instant notifications at every stage.",
+  //   color: "text-blue-600",
+  //   bg: "bg-blue-50",
+  //   cta: "See Dashboard Demo",
+  // },
   {
-    icon: HiChartSquareBar,
-    title: "Smart Dashboard",
-    description: "Track your application progress in real-time with our advanced tracking system. Get instant notifications at every stage.",
+    icon: HiCog,
+    title: "Transparent process",
+    description: "We believe in transparency and keep you informed at every step of your immigration journey.",
     color: "text-blue-600",
     bg: "bg-blue-50",
-    cta: "See Dashboard Demo",
+    cta: "Learn More",
   },
   {
     icon: HiUsers,
     title: "Expert Consultants",
-    description: "Work with certified immigration lawyers and consultants with 15+ years of experience. Available 24/7 for your queries.",
+    description: "Work with expertised immigration consultants with 5+ years of experience. Available 24/7 for your queries.",
     color: "text-teal-600",
     bg: "bg-teal-50",
     cta: "Meet Our Team",
@@ -25,7 +33,7 @@ const features = [
   {
     icon: HiCheckCircle,
     title: "98% Success Rate",
-    description: "Our data-driven approach ensures the highest approval rates. Join 5000+ satisfied clients who achieved their dreams.",
+    description: "Our data-driven approach ensures the highest approval rates. Join 1000+ satisfied clients who achieved their dreams.",
     color: "text-orange-600",
     bg: "bg-orange-50",
     cta: "View Success Stories",
@@ -49,11 +57,11 @@ export const Features = () => {
               <div className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center text-3xl mb-6 ${feature.bg} ${feature.color} group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon />
               </div>
-              
+
               <h3 className="text-xl font-bold font-heading text-gray-900 mb-3">
                 {feature.title}
               </h3>
-              
+
               <p className="text-gray-600 mb-6 leading-relaxed">
                 {feature.description}
               </p>

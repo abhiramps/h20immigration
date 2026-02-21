@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import { useLeadModal } from "@/context/LeadModalContext";
+import Link from "next/link";
 
 export const Hero = () => {
   const { openModal } = useLeadModal();
@@ -20,32 +21,34 @@ export const Hero = () => {
       <Container className="relative z-10 flex flex-col items-center justify-center py-20">
         {/* Text Content */}
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white space-y-8 max-w-4xl text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-white space-y-8 max-w-4xl text-center"
         >
           <div className="inline-flex items-center space-x-2 bg-white/10 px-6 py-2 rounded-full backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors cursor-default">
             <span className="text-yellow-400 text-lg">⭐</span>
-            <span className="text-base font-medium">Trusted by 5000+ Clients Worldwide</span>
+            <span className="text-base font-medium">Trusted by 1000+ Clients Worldwide</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight tracking-tight">
             Your Pathway to <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-white to-blue-200">Global Dreams</span>
           </h1>
-          
+
           <p className="text-lg md:text-2xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
             Expert immigration guidance for Permanent Residency, Job Seeker Visas, and Studies worldwide. Start your journey today.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 pt-6 justify-center">
             <Button variant="primary" size="lg" className="shadow-xl shadow-accent/20 text-lg px-8 h-14" onClick={openModal}>
               Get Your Free Evaluation
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 h-14 backdrop-blur-md bg-white/5 border-white/30 hover:bg-white/10">
-              Explore Services
-            </Button>
+            <Link href="#services">
+              <Button variant="outline" size="lg" className="text-lg px-8 h-14 backdrop-blur-md bg-white/5 border-white/30 hover:bg-white/10">
+                Explore Services
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </Container>
