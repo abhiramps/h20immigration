@@ -17,6 +17,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "H2O Immigration",
   description: "Your Pathway to Global Opportunities - Expert Immigration Guidance",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
