@@ -43,7 +43,7 @@ const faqs = [
   },
   // {
   //   question: "Are your consultants certified?",
-  //   answer: "Absolutely. All our senior consultants are ICCRC-certified (for Canada) or have equivalent credentials for other countries, with 10+ years of immigration experience.",
+  //   answer: "Absolutely. All our senior consultants are ICCRC-certified (for Canada) or have equivalent credentials for other countries, with 5+ years of immigration experience.",
   // },
 ];
 

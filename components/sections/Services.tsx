@@ -28,7 +28,7 @@ const services: ServiceBoxProps[] = [
     features: ["Profile evaluation", "Language eligibility check", "Educational assessment", "Points calculation"],
     color: "bg-blue-100 text-blue-600",
     borderColor: "border-l-blue-600",
-    ctaLink: "#",
+    ctaLink: "",
     ctaText: "Learn More",
   },
   {
@@ -38,7 +38,7 @@ const services: ServiceBoxProps[] = [
     features: ["Work permit guidance", "Job search assistance", "Employer sponsorship", "Skills validation"],
     color: "bg-orange-100 text-orange-600",
     borderColor: "border-l-orange-500",
-    ctaLink: "#",
+    ctaLink: "",
     ctaText: "Learn More",
   },
   {
@@ -48,7 +48,7 @@ const services: ServiceBoxProps[] = [
     features: ["University selection", "Admission assistance", "Course eligibility", "Scholarship guidance"],
     color: "bg-green-100 text-green-600",
     borderColor: "border-l-green-500",
-    ctaLink: "#",
+    ctaLink: "",
     ctaText: "Learn More",
   },
   {

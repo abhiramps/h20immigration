@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Advanced IELTS to CLB Converter | H20 Immigration",
+  title: "Advanced IELTS to CLB Converter | H2O Immigration",
   description: "Official conversion table and calculator for IELTS General Training to Canadian Language Benchmark (CLB) levels.",
 };
 

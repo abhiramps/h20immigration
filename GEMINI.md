@@ -1,8 +1,8 @@
-# H20 Immigration Agency Website
+# H2O Immigration Website
 
 ## Project Overview
 
-This project is a modern, responsive landing page for "H20 Immigration Agency", built to showcase immigration services, success stories, and contact information. It utilizes the latest web technologies to ensure high performance, accessibility, and a premium visual aesthetic.
+This project is a modern, responsive landing page for "H2O Immigration", built to showcase immigration services, success stories, and contact information. It utilizes the latest web technologies to ensure high performance, accessibility, and a premium visual aesthetic.
 
 **Core Technologies:**
 *   **Framework:** [Next.js 16](https://nextjs.org/) (App Router)

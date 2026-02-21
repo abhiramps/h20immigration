@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Advanced Canada FSW Calculator | H20 Immigration",
+  title: "Advanced Canada FSW Calculator | H2O Immigration",
   description: "Detailed point calculator for Canada's Federal Skilled Worker Program (FSW). Check your eligibility with our comprehensive 67-points grid tool.",
 };
 
