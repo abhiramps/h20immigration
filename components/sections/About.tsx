@@ -68,7 +68,7 @@ export const About = () => {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-lg text-gray-600 leading-relaxed"
                         >
-                            Founded on the pillars of integrity, expertise, and transparency, H2O Immigration has been a guiding light for thousands of families and professionals seeking a new life abroad. We understand that immigration is more than just paperwork; it’s a life-changing journey, and we are honored to be a part of it.
+                            Built on the core values of integrity, expertise, and transparency, H2O Immigration has become a trusted partner for thousands of families and professionals pursuing a new life overseas. We recognize that immigration is not just about documentation; it is a transformative life journey, and we are privileged to walk that path alongside you.
                         </motion.p>
 
                         <motion.div
