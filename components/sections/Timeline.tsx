@@ -27,7 +27,7 @@ const timelineSteps = [
     title: "Document Verification",
     description: "We authenticate and organize all required documents for your application",
     icon: HiClipboardCheck,
-    color: "bg-orange-500",
+    color: "bg-accent",
   },
   {
     id: 4,

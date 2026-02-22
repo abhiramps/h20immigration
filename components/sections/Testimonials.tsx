@@ -21,15 +21,13 @@ const testimonials = [
     rating: 5,
     quote: "Professional, transparent, and incredibly helpful. They were always available to answer my queries and kept me updated throughout.",
     flag: "🇦🇺",
-    avatar: "/assets/avatars/ahmed.png",
   },
   {
-    name: "Maria Garcia",
+    name: "Maria Jacob",
     country: "Germany Job Seeker",
     rating: 5,
     quote: "They made the complex process simple. Best decision ever! I landed a job within 3 months of arriving thanks to their guidance.",
     flag: "🇩🇪",
-    avatar: "/assets/avatars/maria.png",
   },
 ];
 
@@ -71,7 +69,7 @@ export const Testimonials = () => {
               </div>
 
               <blockquote className="text-gray-600 italic leading-relaxed text-sm flex-grow">
-                "{testi.quote}"
+                &ldquo;{testi.quote}&rdquo;
               </blockquote>
             </Card>
           ))}

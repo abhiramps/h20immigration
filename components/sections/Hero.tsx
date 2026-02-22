@@ -33,7 +33,7 @@ export const Hero = () => {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight tracking-tight">
             Your Pathway to <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-white to-blue-200">Global Dreams</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-blue-200">Global Dreams</span>
           </h1>
 
           <p className="text-lg md:text-2xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
