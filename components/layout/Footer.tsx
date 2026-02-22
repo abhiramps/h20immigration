@@ -2,7 +2,6 @@
 
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
-import Image from "next/image";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
