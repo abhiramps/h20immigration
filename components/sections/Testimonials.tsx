@@ -8,12 +8,12 @@ import { Avatar } from "@/components/ui/Avatar";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Jean Mishel",
     country: "Canada PR",
     rating: 5,
-    quote: "The team guided me through every step. My PR approval came in just 6 months! Highly recommended for anyone looking for efficient processing.",
+    quote: "We worked with Akshay from H2O Immigration for my Canadian spousal PR process, and I couldn’t be more grateful for his support. He was extremely professional, approachable, and always willing to go the extra mile. We could reach out to him anytime with questions, and he consistently guided us with patience and clarity. His personal involvement really stood out. As this is his new venture, I wish him all the very best and would highly recommend Akshay from H2O Immigration for immigration and visa services.",
     flag: "🇨🇦",
-    avatar: "/assets/avatars/priya.png",
+    avatar: "/assets/avatars/jean.png",
   },
   {
     name: "Ahmed Hassan",
