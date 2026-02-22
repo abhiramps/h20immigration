@@ -34,8 +34,8 @@ const features = [
     icon: HiCheckCircle,
     title: "98% Success Rate",
     description: "Our data-driven approach ensures the highest approval rates. Join 1000+ satisfied clients who achieved their dreams.",
-    color: "text-orange-600",
-    bg: "bg-orange-50",
+    color: "text-accent",
+    bg: "bg-accent/10",
     cta: "View Success Stories",
   },
 ];
