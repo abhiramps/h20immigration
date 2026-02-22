@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { 
   HiChartBar, 
@@ -23,7 +24,7 @@ export const Sidebar = () => {
   return (
     <aside className="w-64 bg-primary text-white flex flex-col h-screen fixed left-0 top-0">
       <div className="p-6 border-b border-white/10">
-        <Link href="/admin" className="text-2xl font-bold font-heading">
+        <Link href="/admin" className="text-2xl font-bold font-heading text-white block">
           H2O<span className="text-accent">Admin</span>
         </Link>
       </div>

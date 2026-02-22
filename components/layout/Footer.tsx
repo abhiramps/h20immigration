@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
@@ -66,7 +67,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>© 2025 H2O Immigration. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} H2O Immigration. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>

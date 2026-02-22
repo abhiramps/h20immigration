@@ -24,7 +24,7 @@ const testimonials = [
     avatar: "/assets/avatars/ahmed.png",
   },
   {
-    name: "Maria Garcia",
+    name: "Maria Jacob",
     country: "Germany Job Seeker",
     rating: 5,
     quote: "They made the complex process simple. Best decision ever! I landed a job within 3 months of arriving thanks to their guidance.",
