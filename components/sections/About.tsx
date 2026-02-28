@@ -18,7 +18,7 @@ export const About = () => {
                         className="relative"
                     >
                         <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                            <div className="bg-gray-200 h-[600px] w-full flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1742&q=80")' }}>
+                            <div className="bg-gray-200 h-[400px] lg:h-[600px] w-full flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1742&q=80")' }}>
                                 <div className="absolute inset-0 bg-primary/20 mix-blend-multiply transition-opacity hover:opacity-0 duration-500" />
                             </div>
                         </div>
@@ -29,13 +29,13 @@ export const About = () => {
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
-                            className="absolute -bottom-10 -right-10 z-20 bg-white p-8 rounded-2xl shadow-xl max-w-xs border-t-4 border-accent"
+                            className="absolute bottom-4 right-4 lg:-bottom-10 lg:-right-10 z-20 bg-white p-6 lg:p-8 rounded-2xl shadow-xl max-w-[200px] lg:max-w-xs border-t-4 border-accent"
                         >
-                            <div className="flex items-center gap-4 mb-3">
-                                <div className="text-4xl font-bold text-accent">98%</div>
+                            <div className="flex items-center gap-3 lg:gap-4 mb-2 lg:mb-3">
+                                <div className="text-3xl lg:text-4xl font-bold text-accent">98%</div>
                                 <div className="text-sm text-gray-600 font-medium">Visa Approval Rate</div>
                             </div>
-                            <p className="text-xs text-gray-500 leading-relaxed">
+                            <p className="text-[10px] lg:text-xs text-gray-500 leading-relaxed">
                                 Consistently delivering success through expert guidance and meticulous documentation.
                             </p>
                         </motion.div>
