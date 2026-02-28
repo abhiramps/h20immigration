@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -71,13 +72,22 @@ export const Header = ({ variant = "transparent" }: HeaderProps) => {
         <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className={cn(
-              "text-2xl md:text-3xl font-bold font-heading relative z-50 transition-colors duration-300",
-              headerIsActive ? "text-primary" : "text-white"
-            )}
+            className="relative z-50 transition-all duration-300"
             onClick={(e) => handleNavClick(e, "/#home")}
           >
-            H2O<span className={headerIsActive ? "text-accent" : "text-white"}>Immigration</span>
+            <div className={cn(
+              "h-14 md:h-16 transition-all duration-300",
+              !headerIsActive && "brightness-0 invert"
+            )}>
+              <Image 
+                src="/assets/logo.svg" 
+                alt="H2O Immigration" 
+                width={200} 
+                height={150}
+                className="h-full w-auto object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}

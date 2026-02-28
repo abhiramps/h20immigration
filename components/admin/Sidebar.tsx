@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -23,8 +24,20 @@ export const Sidebar = () => {
   return (
     <aside className="w-64 bg-primary text-white flex flex-col h-screen fixed left-0 top-0">
       <div className="p-6 border-b border-white/10">
-        <Link href="/admin" className="text-2xl font-bold font-heading text-white block">
-          H2O<span className="text-accent">Admin</span>
+        <Link href="/admin" className="block group">
+          <div className="h-14 brightness-0 invert opacity-90 group-hover:opacity-100 transition-all duration-300">
+            <Image 
+                src="/assets/logo.svg" 
+                alt="H2O Immigration Admin" 
+                width={200} 
+                height={150}
+                className="h-full w-auto object-contain"
+            />
+          </div>
+          <div className="mt-2 flex items-center space-x-2">
+            <div className="h-1 w-1 bg-accent rounded-full animate-pulse"></div>
+            <span className="text-xs font-bold text-white/50 tracking-wider uppercase group-hover:text-accent transition-colors">Admin Dashboard</span>
+          </div>
         </Link>
       </div>
 

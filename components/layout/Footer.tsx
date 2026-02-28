@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
@@ -11,8 +12,16 @@ export const Footer = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="space-y-6">
-                        <Link href="/" className="text-2xl font-bold font-heading text-white block">
-                            H2O<span className="text-accent">Immigration</span>
+                        <Link href="/" className="block">
+                            <div className="h-16 brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
+                                <Image 
+                                    src="/assets/logo.svg" 
+                                    alt="H2O Immigration" 
+                                    width={200} 
+                                    height={150}
+                                    className="h-full w-auto object-contain"
+                                />
+                            </div>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Your trusted partner in global immigration. We facilitate your journey to a better future with expert guidance and transparency.
