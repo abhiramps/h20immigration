@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
@@ -42,11 +43,21 @@ export default function AdminLoginPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <Container className="max-w-md w-full">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-primary font-heading">
-            H2O<span className="text-accent">Admin</span>
+        <div className="text-center mb-8 flex flex-col items-center">
+          <div className="h-24 mb-2">
+             <Image 
+                src="/assets/logo.svg" 
+                alt="H2O Immigration" 
+                width={300} 
+                height={225}
+                className="h-full w-auto object-contain"
+                priority
+              />
+          </div>
+          <h1 className="text-2xl font-bold text-primary font-heading mt-2">
+            Admin <span className="text-accent">Portal</span>
           </h1>
-          <p className="mt-2 text-gray-600 italic">Secure Control Panel</p>
+          <p className="mt-1 text-gray-600 italic">Secure Control Panel</p>
         </div>
 
         <Card className="p-8 shadow-xl border-t-4 border-primary">
