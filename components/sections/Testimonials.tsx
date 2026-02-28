@@ -16,10 +16,10 @@ const testimonials = [
     avatar: "/assets/avatars/jean.png",
   },
   {
-    name: "Ahmed Hassan",
+    name: "Sara Jayakumar",
     country: "Australia Visa",
     rating: 5,
-    quote: "Professional, transparent, and incredibly helpful. They were always available to answer my queries and kept me updated throughout.",
+    quote: "I had a great experience with Akshay from H2O Immigration while applying for my Germany Opportunity Card. He was extremely supportive throughout the entire process. He always answered my calls promptly, patiently clarified all my doubts, and provided clear and accurate instructions at every step. His guidance made the whole application process smooth and stress-free for me. I truly appreciate his professionalism, dedication, and responsiveness. I highly recommend Akshay and H2O Immigration to anyone seeking reliable assistance for immigration services.",
     flag: "🇦🇺",
   },
   {
