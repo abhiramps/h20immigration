@@ -31,7 +31,7 @@ export const Hero = () => {
             <span className="text-base font-medium">Trusted by 1000+ Clients Worldwide</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight tracking-tight">
             Your Pathway to <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-blue-200">Global Dreams</span>
           </h1>

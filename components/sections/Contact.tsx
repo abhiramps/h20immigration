@@ -17,32 +17,32 @@ export const Contact = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-8 md:gap-12">
+          <div className="flex flex-col sm:flex-row gap-6 md:gap-12 w-full md:w-auto items-start sm:items-center justify-center md:justify-start">
             <motion.a 
               href="tel:+919048234641" 
-              className="flex items-center gap-4 group"
+              className="flex items-center gap-4 group w-full sm:w-auto"
               whileHover={{ x: 5 }}
             >
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 flex-shrink-0">
                 <HiPhone className="text-2xl" />
               </div>
-              <div>
-                <p className="text-blue-200 text-sm uppercase tracking-wider font-semibold">Call Us</p>
-                <p className="text-xl font-bold text-white">+91 9048234641</p>
+              <div className="text-left">
+                <p className="text-blue-200 text-xs uppercase tracking-wider font-semibold">Call Us</p>
+                <p className="text-lg md:text-xl font-bold text-white whitespace-nowrap">+91 9048234641</p>
               </div>
             </motion.a>
 
             <motion.a 
               href="mailto:Info@h2oimmigration.com" 
-              className="flex items-center gap-4 group"
+              className="flex items-center gap-4 group w-full sm:w-auto"
               whileHover={{ x: 5 }}
             >
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 flex-shrink-0">
                 <HiMail className="text-2xl" />
               </div>
-              <div>
-                <p className="text-blue-200 text-sm uppercase tracking-wider font-semibold">Email Us</p>
-                <p className="text-xl font-bold text-white">Info@h2oimmigration.com</p>
+              <div className="text-left">
+                <p className="text-blue-200 text-xs uppercase tracking-wider font-semibold">Email Us</p>
+                <p className="text-lg md:text-xl font-bold text-white break-all sm:break-normal">Info@h2oimmigration.com</p>
               </div>
             </motion.a>
           </div>
