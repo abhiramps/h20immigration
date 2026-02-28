@@ -29,27 +29,27 @@ export const ComparisonTable = () => {
                     <table className="w-full min-w-[900px] border-collapse">
                         <thead>
                             <tr className="bg-primary text-white">
-                                <th className="p-5 text-left text-lg font-heading">Feature / Service</th>
-                                <th className="p-5 text-center text-lg font-heading">Permanent Residency</th>
-                                <th className="p-5 text-center text-lg font-heading">Job Seeker Visa</th>
-                                <th className="p-5 text-center text-lg font-heading">Study Visa</th>
-                                <th className="p-5 text-center text-lg font-heading">Calculators</th>
+                                <th className="p-4 md:p-5 text-left text-base md:text-lg font-heading">Feature / Service</th>
+                                <th className="p-4 md:p-5 text-center text-base md:text-lg font-heading">Permanent Residency</th>
+                                <th className="p-4 md:p-5 text-center text-base md:text-lg font-heading">Job Seeker Visa</th>
+                                <th className="p-4 md:p-5 text-center text-base md:text-lg font-heading">Study Visa</th>
+                                <th className="p-4 md:p-5 text-center text-base md:text-lg font-heading">Calculators</th>
                             </tr>
                         </thead>
                         <tbody>
                             {features.map((row, index) => (
                                 <tr key={index} className={`border-b border-gray-100 hover:bg-teal-50/50 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-                                    <td className="p-5 font-bold text-gray-800 border-r border-gray-100/50">{row.name}</td>
-                                    <td className="p-5 text-center text-gray-600 border-r border-gray-100/50 font-medium">
+                                    <td className="p-4 md:p-5 font-bold text-gray-800 border-r border-gray-100/50 text-sm md:text-base">{row.name}</td>
+                                    <td className="p-4 md:p-5 text-center text-gray-600 border-r border-gray-100/50 font-medium text-sm md:text-base">
                                         {renderCell(row.pr)}
                                     </td>
-                                    <td className="p-5 text-center text-gray-600 border-r border-gray-100/50 font-medium">
+                                    <td className="p-4 md:p-5 text-center text-gray-600 border-r border-gray-100/50 font-medium text-sm md:text-base">
                                         {renderCell(row.job)}
                                     </td>
-                                    <td className="p-5 text-center text-gray-600 border-r border-gray-100/50 font-medium">
+                                    <td className="p-4 md:p-5 text-center text-gray-600 border-r border-gray-100/50 font-medium text-sm md:text-base">
                                         {renderCell(row.study)}
                                     </td>
-                                    <td className="p-5 text-center text-gray-600 font-medium">
+                                    <td className="p-4 md:p-5 text-center text-gray-600 font-medium text-sm md:text-base">
                                         {renderCell(row.calc)}
                                     </td>
                                 </tr>
