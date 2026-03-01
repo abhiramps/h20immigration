@@ -17,17 +17,17 @@ const testimonials = [
   },
   {
     name: "Sara Jayakumar",
-    country: "Australia Visa",
+    country: "Germany oppurtunity card",
     rating: 5,
     quote: "I had a great experience with Akshay from H2O Immigration while applying for my Germany Opportunity Card. He was extremely supportive throughout the entire process. He always answered my calls promptly, patiently clarified all my doubts, and provided clear and accurate instructions at every step. His guidance made the whole application process smooth and stress-free for me. I truly appreciate his professionalism, dedication, and responsiveness. I highly recommend Akshay and H2O Immigration to anyone seeking reliable assistance for immigration services.",
-    flag: "🇦🇺",
+    flag: "🇩🇪",
   },
   {
-    name: "Maria Jacob",
-    country: "Germany Job Seeker",
+    name: "Siddarth Sundararajan",
+    country: "Australia PR",
     rating: 5,
-    quote: "They made the complex process simple. Best decision ever! I landed a job within 3 months of arriving thanks to their guidance.",
-    flag: "🇩🇪",
+    quote: "Choosing H2O Immigration was one of the best decisions I made. The team showed excellent expertise and managed my application with complete professionalism and transparency from beginning to end. Their clear, step- by - step guidance made the entire process smooth and helped me get a positive AACA skill assessment for Australia PR in just a month without any difficulties.I truly appreciate their support and would highly recommend H2O Immigration to anyone planning their PR journey.",
+    flag: "🇦🇺",
   },
 ];
 
@@ -48,20 +48,20 @@ export const Testimonials = () => {
           {testimonials.map((testi, index) => (
             <Card key={index} className="border-l-4 border-l-teal-500 h-full flex flex-col">
               <div className="flex items-center space-x-4 mb-6">
-                <Avatar 
-                  src={testi.avatar} 
-                  alt={testi.name} 
+                <Avatar
+                  src={testi.avatar}
+                  alt={testi.name}
                   className="w-12 h-12"
                   fallbackClassName="bg-gradient-to-br from-teal-500 to-blue-600 text-white"
                 />
                 <div>
-                   <div className="font-bold text-gray-900">{testi.name}</div>
-                   <div className="text-sm text-gray-500 flex items-center">
-                     <span className="mr-1 text-lg">{testi.flag}</span> {testi.country}
-                   </div>
+                  <div className="font-bold text-gray-900">{testi.name}</div>
+                  <div className="text-sm text-gray-500 flex items-center">
+                    <span className="mr-1 text-lg">{testi.flag}</span> {testi.country}
+                  </div>
                 </div>
               </div>
-              
+
               <div className="flex text-yellow-400 mb-4">
                 {[...Array(testi.rating)].map((_, i) => (
                   <HiStar key={i} />
